@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fnh-cJ-744">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Card View Controller-->
+        <scene sceneID="tQP-7h-oIb">
+            <objects>
+                <viewController id="Fnh-cJ-744" customClass="RandomCardViewController" customModule="OneDeckOfCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iVg-sV-qPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="SZu-Xr-Eht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e8S-bh-HwP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kNA-0a-9VG">
+                                <rect key="frame" x="67" y="37" width="240" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Eed-HJ-NBl"/>
+                                    <constraint firstAttribute="height" constant="366" id="i12-ZH-6nI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKR-Zr-lRs">
+                                <rect key="frame" x="164" y="435" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UxK-AX-XRC"/>
+                                    <constraint firstAttribute="width" constant="46" id="h3K-JL-dKB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="Fnh-cJ-744" eventType="touchUpInside" id="SwC-1D-v0F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kNA-0a-9VG" firstAttribute="centerX" secondItem="e8S-bh-HwP" secondAttribute="centerX" id="9K0-b1-Q78"/>
+                            <constraint firstItem="kKR-Zr-lRs" firstAttribute="centerX" secondItem="e8S-bh-HwP" secondAttribute="centerX" id="S88-4I-YLF"/>
+                            <constraint firstItem="kKR-Zr-lRs" firstAttribute="top" secondItem="kNA-0a-9VG" secondAttribute="bottom" constant="32" id="ai4-Kf-l9d"/>
+                            <constraint firstItem="kNA-0a-9VG" firstAttribute="top" secondItem="iVg-sV-qPf" secondAttribute="bottom" constant="17" id="yFT-O4-ui5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="kNA-0a-9VG" id="O06-Db-GlH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9x1-At-Ehg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+</document>
